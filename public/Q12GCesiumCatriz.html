@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 3rd Graded Exercise submitted by Evan Catriz of 9-Cesium</h2>
+    <label>Meal Price:
+        <input id="mealPrice" />
+    </label><br>
+    <label>Tip:
+        <input id="tip" />
+    </label><br>
+    <label>Service Charge:
+        <input id="serviceCharge" />
+    </label> <br>
+
+    <button onclick="totalMeal()"> Accept Input </button>
+    <span id = "tMealPriceId"> </span>
+
+    <script>
+        function totalMeal() {
+              var mPrice = parseFloat(document.getElementById("mealPrice").value);
+              var tPrice = parseFloat(document.getElementById("tip").value);
+              var sChange = parseFloat(document.getElementById("serviceCharge").value);
+              
+              var tMealPrice = (mPrice + tPrice + (sChange / 100 * mPrice));
+              var tMealPrice = tMealPrice.toFixed(2);
+              
+              document.getElementById("tMealPriceId").innerText = `\n\nTotal Meal: ${tMealPrice}$`;
+         
+            /*
+            sources:
+            https://www.w3schools.com/jsref/jsref_parsefloat.asp -- string to number
+            https://www.w3schools.com/jsref/jsref_tofixed.asp -- toFixed() function
+            */
+        }
+    </script>
+
+</body>
+</html>
