@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Q13GCesiumCatrizCSS.css">
+   <h2> Q1 3rd Graded Exercise submitted by Evan of 9-Cesium</h2>
+
+   <p><br>Guess the number: *** <br>
+    The number is from 1 to 100 <br><br> </p>
+
+    <label>Enter your guess: &nbsp;
+        <input id="guess"/>
+    </label> <br>
+    <button onclick="checkIt()"><b> Check It</b> </button> <br>
+    <p id="result">Result: </p>
+
+    <script>
+
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+
+        function checkIt() {
+            var gInput = parseFloat(document.getElementById("guess").value);
+            var result = document.getElementById("result");
+            
+            if(gInput < dNumber){
+                result.innerHTML = "Result: Higher";
+            }
+            else if (gInput > dNumber){
+                result.innerHTML = "Result: Lower";
+            }
+            else {
+                result.innerHTML = "Result: Correct!";
+            }
+        }
+        /*
+        sources:
+        https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css -- comfortaa font (?)
+        */
+    </script>
+
+</body>
+
+</html>
